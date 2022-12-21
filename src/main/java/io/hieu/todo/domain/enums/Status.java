@@ -1,16 +1,20 @@
 package io.hieu.todo.domain.enums;
 
-import lombok.Getter;
+import com.fasterxml.jackson.annotation.JsonValue;
+import lombok.RequiredArgsConstructor;
+import lombok.ToString;
 
+@RequiredArgsConstructor
+@ToString
 public enum Status {
-    DONE("DONE"),
+    TO_DO("TO DO"),
     IN_PROGRESS("IN PROGRESS"),
-    TO_DO("TO DO");
+    DONE("DONE");
 
-    @Getter
     private final String status;
 
-    private Status(final String status) {
-        this.status = status;
+    @JsonValue
+    public String getStatus() {
+        return status;
     }
 }
