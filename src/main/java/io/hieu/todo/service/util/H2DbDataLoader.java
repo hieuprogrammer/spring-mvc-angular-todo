@@ -58,6 +58,12 @@ public class H2DbDataLoader implements CommandLineRunner {
                         status(Status.IN_PROGRESS)
                         .build()
         );
+        this.todoRepository.save(
+                Todo.builder()
+                        .task("Dockerize and deploy this application to Docker Hub")
+                        .status(Status.DONE)
+                        .build()
+        );
 
         log.info("Data loaded.\n" + this.todoRepository.findAll().toString());
     }

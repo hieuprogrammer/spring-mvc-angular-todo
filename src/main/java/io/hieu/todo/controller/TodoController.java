@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping({"/tasks", "/tasks.*", "/tasks/", "/todo", "/todo.*", "/todo/", "/todos", "/todos.*", "/todos/", "/to-do", "/to-do.*", "/to-do/", "/to-dos", "/to-dos.*", "/to-dos/"})
+@RequestMapping({"/api/tasks", "/api/tasks.*", "/api/tasks/", "/api/todo", "/api/todo.*", "/api/todo/", "/api/todos", "/api/todos.*", "/api/todos/", "/api/to-do", "/api/to-do.*", "/api/to-do/", "/api/to-dos", "/api/to-dos.*", "/api/to-dos/"})
 @RequiredArgsConstructor
 public class TodoController {
     private final TodoService todoService;
